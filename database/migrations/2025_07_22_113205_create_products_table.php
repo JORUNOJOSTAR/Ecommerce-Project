@@ -16,10 +16,9 @@ return new class extends Migration
             $table->string('title',2000);
             $table->string('slug',2000);
             $table->string('image',2000)->nullable();
-            $table->string('image_mime',45)->nullable();
+            $table->string('image_mime')->nullable();
             $table->integer('image_size')->nullable();
             $table->longText('description')->nullable();
-            $table->string('status',25);
             $table->decimal('price', total: 10, places: 2);
             $table->foreignIdFor(User::class,'created_by')->nullable();
             $table->foreignIdFor(User::class,'updated_by')->nullable();
