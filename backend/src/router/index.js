@@ -7,6 +7,7 @@ import AppLayout from "../components/AppLayout.vue";
 import Products from "../views/Products.vue";
 import Reports from "../views/Reports.vue";
 import Users from "../views/Users.vue";
+import NotFound from "../views/NotFound.vue";
 import store from "../store/index.js";
 
 const routes = [
@@ -64,6 +65,11 @@ const routes = [
             requiresGuest: true,
         }
     },
+    {
+        path: '/:pathMath(.*)',
+        name: 'notfound',
+        component: NotFound,
+    }
 
 ];
 
