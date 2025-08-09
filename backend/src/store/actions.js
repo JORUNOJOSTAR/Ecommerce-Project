@@ -17,3 +17,11 @@ export function logout({commit}){
         });
 }
 
+export function getUser({commit}){
+    return axiosClient.get('/user')
+        .then((response)=>{
+            commit('setUser',response.data);
+            return response;
+        });
+}
+

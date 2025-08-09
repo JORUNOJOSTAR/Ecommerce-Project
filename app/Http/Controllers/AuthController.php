@@ -19,8 +19,8 @@ class AuthController extends Controller
         if(!Auth::attempt($credentials,$remember)){
             return response([
                 'message' => 'Email or Password is incorrect',
-                422
-            ]);
+
+            ],422);
         }
         /** @var \App\Models\User $user */
         $user = Auth::user();
@@ -28,8 +28,7 @@ class AuthController extends Controller
             Auth::logout();
             return response([
                 'message' => 'You are not authorized to access this resource',
-                403
-            ]);
+            ],403);
         }
 
         $token = $user->createToken('main')->plainTextToken;
@@ -45,7 +44,6 @@ class AuthController extends Controller
         $user->currentAccessToken()->delete();
         return response([
             '',
-            204
-        ]);
+        ],204);
     }
 }
