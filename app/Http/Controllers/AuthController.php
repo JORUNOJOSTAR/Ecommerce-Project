@@ -43,7 +43,6 @@ class AuthController extends Controller
         /** @var \App\Models\User $user */
         $user = Auth::user();
         $user->currentAccessToken()->delete();
-        Auth::logout();
         return response([
             '',
             204
