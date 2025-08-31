@@ -33,7 +33,7 @@ class AuthController extends Controller
 
         $token = $user->createToken('main')->plainTextToken;
         return response([
-            'user' => $user,
+            'user' => $user->toResource(),
             'token' => $token
         ]);
     }
@@ -45,5 +45,9 @@ class AuthController extends Controller
         return response([
             '',
         ],204);
+    }
+
+    public function getUser(Request $request){
+        return $request->user()->toResource();
     }
 }

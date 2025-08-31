@@ -55,7 +55,7 @@
 
 <script setup>
 import { XMarkIcon } from '@heroicons/vue/24/outline'
-import {ref} from "vue";
+import {reactive, ref} from "vue";
 import GuestLayout from "../components/GuestLayout.vue";
 import store from "../store/index.js";
 import {useRouter} from "vue-router";
@@ -64,11 +64,11 @@ const router = useRouter();
 const loading = ref(false);
 const errorMsg = ref('');
 
-const user = {
+const user = reactive({
     email: '',
     password: '',
     remember: false,
-};
+});
 
 function login(){
     loading.value = true;
