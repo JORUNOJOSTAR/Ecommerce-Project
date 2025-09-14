@@ -4,7 +4,7 @@ import Login from "../views/Login.vue";
 import RequestPassword from "../views/RequestPassword.vue";
 import ResetPassword from "../views/ResetPassword.vue";
 import AppLayout from "../components/AppLayout.vue";
-import Products from "../views/Products.vue";
+import Products from "../views/Products/Products.vue";
 import Reports from "../views/Reports.vue";
 import Users from "../views/Users.vue";
 import NotFound from "../views/NotFound.vue";
