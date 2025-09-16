@@ -83,10 +83,10 @@
 </template>
 <script setup>
 import { computed, onMounted, ref } from 'vue';
-import store from '../../store/index.js';
-import Spinner from '../../components/core/Spinner.vue';
-import { PRODUCTS_PER_PAGE } from '../../constant.js';
-import TableHeaderCell from '../../components/core/Table/TableHeaderCell.vue';
+import store from '@/store/index.js';
+import Spinner from '@/components/core/Spinner.vue';
+import { PRODUCTS_PER_PAGE } from '@/constant.js';
+import TableHeaderCell from '@/components/core/Table/TableHeaderCell.vue';
 
 const perPage = ref(PRODUCTS_PER_PAGE);
 const search = ref('');

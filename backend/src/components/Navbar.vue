@@ -70,7 +70,7 @@
 import {Bars3Icon,ArrowRightStartOnRectangleIcon, UserIcon} from "@heroicons/vue/24/outline";
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
 import { ChevronDownIcon } from '@heroicons/vue/20/solid'
-import store from "../store/index.js";
+import store from "@/store/index.js";
 import { useRouter } from "vue-router";
 import {computed} from "vue";
 

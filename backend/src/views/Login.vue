@@ -56,8 +56,8 @@
 <script setup>
 import { XMarkIcon } from '@heroicons/vue/24/outline'
 import {reactive, ref} from "vue";
-import GuestLayout from "../components/GuestLayout.vue";
-import store from "../store/index.js";
+import GuestLayout from "@/components/GuestLayout.vue";
+import store from "@/store/index.js";
 import {useRouter} from "vue-router";
 
 const router = useRouter();

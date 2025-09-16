@@ -20,11 +20,11 @@
 </template>
 
 <script setup>
-import Sidebar from "./Sidebar.vue";
-import Navbar from "./Navbar.vue";
+import Sidebar from "@/components/Sidebar.vue";
+import Navbar from "@/components/Navbar.vue";
 import {ref,onMounted,onUnmounted,computed} from "vue";
-import store from "../store/index.js";
-import Spinner from "./core/Spinner.vue";
+import store from "@/store/index.js";
+import Spinner from '@/components/core/Spinner.vue';
 const sideBarOpened = ref(true);
 
 const currentUser = computed(()=>store.state.user.data);
