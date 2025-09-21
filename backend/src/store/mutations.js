@@ -12,8 +12,6 @@ export function setToken(state,token){
 }
 
 export function setProducts(state,[loading,response]){
-    
-
     if(response){
         state.products = {
             data : response.data,

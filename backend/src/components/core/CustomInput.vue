@@ -21,7 +21,7 @@
                        :class="inputClasses"
                        :placeholder="label"
                        :value="modelValue"
-                       @input="emit('update:modelValue',$event.target.files[0])">
+                       @input="emit('change',$event.target.files[0])">
             </template>
             <template v-else>
                 <input :type="type"

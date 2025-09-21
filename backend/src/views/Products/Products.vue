@@ -24,6 +24,7 @@ const productModel = ref({
     description: '',
     price: '',
 });
+
 function showProductModal(){
     showModal.value = true;
 }
