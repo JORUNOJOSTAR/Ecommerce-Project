@@ -138,7 +138,7 @@ function onSubmit(){
       .then(response=>{
         loading.value = false;
         if(response.status === 201){
-          store.dispatch('getProduct');
+          store.dispatch('getProducts');
           closeModal();
         }
       });

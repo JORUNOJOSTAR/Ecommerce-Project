@@ -25,7 +25,7 @@ export function getUser({commit}){
         });
 }
 
-export function getProducts({commit},{url=null,search= '',perPage=10,sort_field,sort_direction}){
+export function getProducts({commit},{url=null,search= '',perPage=10,sort_field,sort_direction}={}){
     commit('setProducts',[true]);
     url = url || '/products';
     return axiosClient.get(url,{
@@ -75,3 +75,6 @@ export function updateProduct({commit},product){
     return axiosClient.post(`/products/${product.id}`,product);
 }
 
+export function deleteProduct({commit},id){
+    return axiosClient.delete(`/products/${id}`);
+}
