@@ -12,6 +12,8 @@ class ProductResource extends JsonResource
      *
      * @return array<string, mixed>
      */
+
+    public static $wrap = false;
     public function toArray(Request $request): array
     {
         return [
@@ -19,7 +21,7 @@ class ProductResource extends JsonResource
             'title' => $this->title,
             'slug' => $this->slug,
             'description' => $this->description,
-            'image' => $this->image,
+            'image_url' => $this->image,
             'price' => $this->price,
             'created_at' => $this->created_at->toDateTimeString(),
             'updated_at' => $this->updated_at->toDateTimeString(),
