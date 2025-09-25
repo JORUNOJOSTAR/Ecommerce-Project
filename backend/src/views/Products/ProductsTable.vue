@@ -38,13 +38,13 @@
             </thead>
             <tbody v-if="products.loading">
                 <tr>
-                    <td colspan="5">
+                    <td colspan="6">
                         <Spinner class="my-4" />
                     </td>
                 </tr>
             </tbody>
             <tbody v-else>
-                <tr v-for="(product,index) in products.data" class="animate-fade-in-down" :style="{'animation-delay':`${index * 0.2}s`}">
+                <tr v-for="(product,index) in products.data" >
                     <td class="border-b-2 p-2">{{ product.id }}</td>
                     <td class="border-b-2 p-2">
                         <img class="w-16" :src="product.image_url" :alt="product.title">
