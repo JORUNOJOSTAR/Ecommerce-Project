@@ -4,7 +4,7 @@
 
     <div class="w-full sm:w-[400px] px-5 mx-auto mt-16 text-center ">
         <h2 class="text-2xl font-semibold mb-2">Login to your account</h2>
-        <p class="mb-4">or <a href="/src/signup.html" class="text-purple-600 hover:text-purple-500 ">Create new
+        <p class="mb-4">or <a href="{{ route('register') }}" class="text-purple-600 hover:text-purple-500 ">Create new
                 one</a></p>
         <form method="POST" action="{{ route('login') }}">
             <x-input-error-box/>
@@ -19,12 +19,12 @@
 
             <div class="flex justify-between mb-3">
                 <div class="flex items-center">
-                    <input type="checkbox" id="rememberMe" class="text-purple-600 focus:ring-purple-600">
+                    <input type="checkbox" id="rememberMe" name="remember" class="text-purple-600 focus:ring-purple-600">
                     <label for="rememberMe" class="text-gray-600 ml-2">
                         Remember Me
                     </label>
                 </div>
-                <a href="/src/password-reset.html" class="text-purple-600 hover:text-purple-500">Reset Your Password</a>
+                <a href="{{ route('password.request') }}" class="text-purple-600 hover:text-purple-500">Reset Your Password</a>
             </div>
 
             <button class="btn-emerald w-full flex items-center justify-center">
