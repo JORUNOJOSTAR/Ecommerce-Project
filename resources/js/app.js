@@ -106,66 +106,6 @@ document.addEventListener('alpine:init', () => {
         }
     });
 
-    Alpine.data('singupForm',()=>({
-        errorClasses: 'border-red-500 ring-1 ring-red-600 focus:ring-red-600',
-        defaultClasses: 'focus:border-purple-600 focus:ring-purple-600',
-        successClasses: 'border-emerald-500 ring-1 ring-emerald-600 focus:ring-emerald-600',
-        form: {
-          name: '',
-          email: '',
-          password: '',
-          password_repeat: '',
-        },
-        errors:{
-          name: '',
-          email: '',
-          password: '',
-          password_repeat: '',
-        },
-        submit(){
-          console.log(this.form);
-          this.validateName();
-          this.validateEmail();
-          this.validatePassword();
-          this.validatePasswordRepeat();
-        },
-        validateName(){
-          this.errors.name = '';
-          if(!this.form.name){
-            this.errors.name = 'This field is required';
-          } else if(this.form.name.length < 2){
-            this.errors.name = 'This name should be at least two character';
-          }
-        },
-        validateEmail(){
-          this.errors.email = '';
-          if(!this.form.email){
-            this.errors.email = 'This field is required';
-          } else if(!this.validateEmailWithRegex()){
-            this.errors.email = 'This must be a valid email field';
-          }
-        },
-        validateEmailWithRegex(){
-          return String(this.form.email)
-            .toLowerCase()
-            .match(
-              /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-            );
-        },
-        validatePassword(){
-          this.errors.password = '';
-          if(!this.form.password){
-            this.errors.password = 'This field is required';
-          }
-        },
-        validatePasswordRepeat(){
-          this.errors.password_repeat = '';
-          if(!this.form.password_repeat){
-            this.errors.password_repeat = 'This field is required';
-          }
-        },
-    }))
-
 })
 
 Alpine.start();
